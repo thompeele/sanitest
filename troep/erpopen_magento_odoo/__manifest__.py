@@ -1,0 +1,37 @@
+{
+    'name': 'Odoo Magento Connector',
+    'version': '2.3',
+    'category': 'all',
+    'description': 'Magento odoo connector',
+    'summary': 'Magento odoo connector. ',
+    'author': 'Thom Peele - ERP|OPEN',
+    'website': 'erpopen.nl',
+    'support': 'info@erpopen.nl',
+    'depends': [
+        'base',
+        'product',
+        'sale',
+        'stock',
+        'delivery',
+        'account_accountant',
+        'purchase'
+    ],
+    'data': [
+        'views/magento.xml',
+        'views/magento_error_log.xml',
+        'views/magento_odoo.xml',
+        'views/product_product.xml',
+        'views/import_widget.xml',
+        'views/account_journal.xml',
+        'views/delivery_carrier.xml',
+        'views/sale_order.xml',
+        'security/ir.model.access.csv',
+        'data/error_log_cron.xml',
+    ],
+    'qweb': [
+        'static/src/xml/multiwidget_template.xml',
+    ],
+    'installable': True,
+    'auto_install': False,
+    'images': ['images/icon.png'],
+}
