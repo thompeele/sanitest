@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <!-- Ext Order Matrix -->
+        <record id="view_ext_order_matrix_form" model="ir.ui.view">
+            <field name="name">ext.order.matrix.form</field>
+            <field name="model">ext.order.matrix</field>
+            <field name="arch" type="xml">
+                <form string="Ext Order Matrix">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="ext_payment"/>
+                                <field name="ext_delivery"/>
+                            </group>
+                            <group>
+                                <field name="payment_term"/>
+                                <field name="order_policy"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_ext_order_matrix_tree" model="ir.ui.view">
+            <field name="name">ext.order.matrix.tree</field>
+            <field name="model">ext.order.matrix</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Ext Order Matrix">
+                    <field name="ext_payment"/>
+                    <field name="ext_delivery"/>
+                    <field name="payment_term"/>
+                    <field name="order_policy"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_ext_order_matrix" model="ir.actions.act_window">
+            <field name="name">Ext Order Matrix</field>
+            <field name="res_model">ext.order.matrix</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="view_ext_order_matrix_tree"/>
+        </record>
+
+    </data>
+</odoo>

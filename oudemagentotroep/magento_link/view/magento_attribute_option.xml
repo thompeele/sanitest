@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <!-- Attribute-->
+        <record id="magento_attribute__optionform" model="ir.ui.view">
+            <field name="name">magento.attribute.option.form</field>
+            <field name="model">magento.attribute.option</field>
+            <field name="arch" type="xml">
+                <form string="Attribute Option">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="value"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="attribute_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="magento_attribute_option_tree" model="ir.ui.view">
+            <field name="name">magento.attribute.option.tree</field>
+            <field name="model">magento.attribute.option</field>
+            <field name="arch" type="xml">
+                <tree string="Attributes">
+                    <field name="name"/>
+                    <field name="value"/>
+                    <field name="active"/>
+                    <field name="attribute_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_view_magento_attribute_option" model="ir.actions.act_window">
+            <field name="name">Magento Attributes Options</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">magento.attribute.option</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p><p>
+                <!-- More details about what a user can do with this object will be OK -->
+            </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="connector_menu_main" name="External" sequence="100"/>
+    <menuitem id="connector_menu_general" name="General" parent="connector_menu_main" sequence="10"/>
+    <menuitem id="connector_menu_settings" name="Settings" parent="connector_menu_main" sequence="100"/>
+
+    <menuitem id="menu_external_connection"
+              name="Connections"
+              parent="connector_menu_settings"
+              action="external_connection_action"
+              sequence="1"
+    />
+
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+                id="budgetsanitair_picking_dropship"
+                model="stock.picking"
+                string="Budget-Sanitair Picking"
+                report_type="qweb-pdf"
+                name="budgetsanitair_dropship_reports.budgetsanitair_picking_dropship_report"
+                file="budgetsanitair_dropship_reports.budgetsanitair_picking_dropship_report"
+        />
+
+        <template id="budgetsanitair_picking_dropship_report">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-set="budgetsanitair" t-value="1"/>
+                    <t t-call="stock.report_picking"/>
+                </t>
+            </t>
+        </template>
+
+        <!-- DELIVERY -->
+
+        <report
+                id="budgetsanitair_delivery_dropship"
+                model="stock.picking"
+                string="Budget-Sanitair Delivery Slip"
+                report_type="qweb-pdf"
+                name="budgetsanitair_dropship_reports.budgetsanitair_delivery_dropship_report"
+                file="budgetsanitair_dropship_reports.budgetsanitair_delivery_dropship_report"
+        />
+
+        <template id="budgetsanitair_delivery_dropship_report">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-set="budgetsanitair" t-value="1"/>
+                    <t t-call="stock.report_deliveryslip"/>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

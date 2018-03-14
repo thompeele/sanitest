@@ -1,0 +1,227 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* budgetsanitair_dropship_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e-20170328\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-16 13:17+0000\n"
+"PO-Revision-Date: 2017-06-16 15:22+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: nl\n"
+"X-Generator: Poedit 1.8.8\n"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.budgetsanitair_picking_dropship_document
+msgid ""
+"<br/>\n"
+"                    <strong>WARNING: This a a Budget-Sanitair order. Print a different Pickorder.</strong>\n"
+"                    <br/>"
+msgstr ""
+"<br/>\n"
+"                    <strong>LET OP: Dit is een Budget-Sanitair order. Print een andere Pickorder.</strong>\n"
+"                    <br/>"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.bs_delivery_dropship_budgetsanitair
+msgid ""
+"<br/>\n"
+"                    <strong>WARNING: This a a Budget-Sanitair order. Print a differente Delivery Slip.</strong>\n"
+"                    <br/>"
+msgstr ""
+"<br/>\n"
+"                    <strong>LET OP: Dit is een Budget-Sanitair order. Print een andere Pakbon.</strong>\n"
+"                    <br/>"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.budgetsanitair_picking_dropship_document
+msgid ""
+"<br/>\n"
+"                    <strong>WARNING: This a a Sanitairkamer order. Print a different Pickorder.</strong>\n"
+"                    <br/>"
+msgstr ""
+"<br/>\n"
+"                    <strong>LET OP: Dit is een Sanitairkamer order. Print een andere Pickorder.</strong>\n"
+"                    <br/>"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.bs_delivery_dropship_budgetsanitair
+msgid ""
+"<br/>\n"
+"                    <strong>WARNING: This a a Sanitairkamer order. Print a differente Delivery Slip.</strong>\n"
+"                    <br/>"
+msgstr ""
+"<br/>\n"
+"                    <strong>LET OP: Dit is een Sanitairkamer order. Print een andere Pakbon.</strong>\n"
+"                    <br/>"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.budgetsanitair_picking_dropship_document
+msgid ""
+"<span>\n"
+"                                <strong>CUSTOMER ADDRESS:</strong>\n"
+"                            </span>"
+msgstr ""
+"<span>\n"
+"                                <strong>KLANT ADRES:</strong>\n"
+"                            </span>"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.bs_delivery_dropship_budgetsanitair
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.budgetsanitair_picking_dropship_document
+msgid ""
+"<span>\n"
+"                                <strong>DELIVERY ADDRESS:</strong>\n"
+"                            </span>"
+msgstr ""
+"<span>\n"
+"                                <strong>AFLVERADRES:</strong>\n"
+"                            </span>"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.budgetsanitair_picking_dropship_document
+msgid ""
+"<span>\n"
+"                            <strong>DELIVERY ADDRESS:</strong>\n"
+"                        </span>"
+msgstr ""
+"<span>\n"
+"                            <strong>AFLVERADRES:</strong>\n"
+"                        </span>"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.budgetsanitair_picking_dropship_document
+msgid ""
+"<span>\n"
+"                            <strong>DELIVERY ADDRESS:</strong>\n"
+"                        </span>\n"
+"                        <br/>"
+msgstr ""
+"<span>\n"
+"                            <strong>AFLVERADRES:</strong>\n"
+"                        </span>\n"
+"                        <br/>"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.budgetsanitair_picking_dropship_document
+msgid ""
+"<span>\n"
+"                            <strong>VENDOR ADDRESS:</strong>\n"
+"                        </span>"
+msgstr ""
+"<span>\n"
+"                            <strong>LEVERANCIER ADRES:</strong>\n"
+"                        </span>"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.budgetsanitair_picking_dropship_document
+msgid ""
+"<span>\n"
+"                            <strong>WAREHOUSE ADDRESS:</strong>\n"
+"                        </span>"
+msgstr ""
+"<span>\n"
+"                            <strong>MAGAZIJN ADRES:</strong>\n"
+"                        </span>"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.bs_delivery_dropship_budgetsanitair
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.budgetsanitair_picking_dropship_document
+msgid "<strong>Order (Origin)</strong>"
+msgstr "<strong>Order (Bron)</strong>"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.bs_delivery_dropship_budgetsanitair
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.budgetsanitair_picking_dropship_document
+msgid "<strong>Scheduled Date</strong>"
+msgstr "<strong>Geplande datum</strong>"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.bs_delivery_dropship_budgetsanitair
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.budgetsanitair_picking_dropship_document
+msgid "<strong>State</strong>"
+msgstr "<strong>Status</strong>"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.bs_custom_footer
+msgid ""
+"Budget-Sanitair B.V.\n"
+"                            <br/>"
+msgstr ""
+"Budget-Sanitair B.V.\n"
+"                            <br/>"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.actions.report.xml,name:budgetsanitair_dropship_reports.budgetsanitair_delivery_dropship
+msgid "Budget-Sanitair Delivery Slip"
+msgstr "Budget-Sanitair Pakbon"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.actions.report.xml,name:budgetsanitair_dropship_reports.budgetsanitair_picking_dropship
+msgid "Budget-Sanitair Picking"
+msgstr "Budget-Sanitair Pickbon"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.bs_custom_footer
+msgid "Chamber of Commerce:"
+msgstr "Kamer van Koophandel:"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.bs_custom_footer
+msgid "IBAN:"
+msgstr "IBAN:"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.bs_custom_footer
+msgid ""
+"IBAN: NL09 INGB 0007 3126 88\n"
+"                            <br/>\n"
+"                            KvK: 65902114\n"
+"                            <br/>\n"
+"                            BTW: NL 8563.094.85.B01\n"
+"                            <br/>"
+msgstr ""
+"IBAN: NL09 INGB 0007 3126 88\n"
+"                            <br/>\n"
+"                            KvK: 65902114\n"
+"                            <br/>\n"
+"                            BTW: NL 8563.094.85.B01\n"
+"                            <br/>"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.bs_dropship_custom_header
+msgid "Logo Budget-Sanitair"
+msgstr "Logo Budget-Sanitair"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.bs_custom_footer
+msgid "TIN:"
+msgstr "BTW:"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.budgetsanitair_picking_dropship_document
+msgid "VAT:"
+msgstr "BTW:"
+
+#. module: budgetsanitair_dropship_reports
+#: model:ir.ui.view,arch_db:budgetsanitair_dropship_reports.bs_custom_footer
+msgid ""
+"www.budget-sanitair.nl\n"
+"                            <br/>\n"
+"                            info@budget-sanitair.nl\n"
+"                            <br/>\n"
+"                            +31 (0) 341 232 323\n"
+"                            <br/>"
+msgstr ""
+"www.budget-sanitair.nl\n"
+"                            <br/>\n"
+"                            info@budget-sanitair.nl\n"
+"                            <br/>\n"
+"                            +31 (0) 341 232 323\n"
+"                            <br/>"

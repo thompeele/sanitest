@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="business_2_business_view_form" model="ir.ui.view">
+        <field name="name">business.2.business.form</field>
+        <field name="model">business.2.business</field>
+        <field name="inherit_id" ref="business_2_business.business_2_business_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet//page[@name='lines']" position="after">
+                <page name="product" string="Product Sync">
+                    <group>
+                        <group string="Stock Qty">
+                            <field name="min_stock_qty"/>
+                            <field name="max_stock_qty"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="business_2_business_view_tree" model="ir.ui.view">
+        <field name="name">business.2.business.tree</field>
+        <field name="model">business.2.business</field>
+        <field name="inherit_id" ref="business_2_business.business_2_business_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="confirm_order" position="after">
+                <field name="max_stock_qty"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

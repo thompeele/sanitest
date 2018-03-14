@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="bs_dropship_custom_header" inherit_id="sanitairkamer_reports.sk_custom_header">
+            <xpath expr="//div[@class='header']" position="replace">
+                <t t-if="not budgetsanitair">
+                    <div class="header">
+                        <div class="row" style="padding:20 0 20 0; overflow:hidden;" height="100px">
+                            <div class="col-xs-7" style="min-height:100px;">
+                                <img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % company.logo"
+                                     style="max-height: 100px;"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div name="company_address"></div>
+                </t>
+                <t t-if="budgetsanitair">
+                    <div class="header">
+                        <div class="row" style="padding:0 0 20 0; overflow:hidden;" height="100px">
+                            <img src="/budgetsanitair_dropship_reports/static/src/img/logo-bs.png"
+                                 alt="Logo Budget-Sanitair" style="max-height:100px;"/>
+                        </div>
+                    </div>
+                    <div name="company_address"></div>
+                </t>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="business_2_business_view_form" model="ir.ui.view">
+        <field name="name">business.2.business.form</field>
+        <field name="model">business.2.business</field>
+        <field name="arch" type="xml">
+            <form string="B2B">
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="partner_id"/>
+                        <field name="pricelist_id"/>
+                        <field name="section_id"/>
+                        <field name="active"/>
+                    </group>
+
+                    <notebook name="notebook1">
+                        <page name="information" string="Information">
+                            <group>
+                                <group>
+                                    <field name="confirm_order"/>
+                                </group>
+                            </group>
+                            <field name="description"/>
+                        </page>
+                        <page name="lines" string="Special Lines">
+                            <field name="lines">
+                                <tree editable="bottom">
+                                    <field name="type"/>
+                                    <field name="product_id"/>
+                                    <field name="price_unit"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="type"/>
+                                            <field name="product_id"/>
+                                            <field name="price_unit"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="business_2_business_view_tree" model="ir.ui.view">
+        <field name="name">business.2.business.tree</field>
+        <field name="model">business.2.business</field>
+        <field name="arch" type="xml">
+            <tree string="B2Bs">
+                <field name="partner_id"/>
+                <field name="pricelist_id"/>
+                <field name="section_id"/>
+                <field name="confirm_order"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="business_2_business_action" model="ir.actions.act_window">
+        <field name="name">B2B Connections</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">business.2.business</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                <!-- Add Text Here -->
+            </p><p>
+            <!-- More details about what a user can do with this object will be OK -->
+        </p>
+        </field>
+    </record>
+
+</odoo>

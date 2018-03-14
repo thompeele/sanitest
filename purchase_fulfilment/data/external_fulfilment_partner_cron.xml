@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<odoo noupdate="1">
+
+    <record forcecreate="True" id="external_fulfilment_partner_order_state_cron" model="ir.cron">
+        <field name="name">Fulfilment Check Order State</field>
+        <field name="active" eval="True"/>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">15</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False"/>
+        <field name="model" eval="'external.fulfilment.partner'"/>
+        <field name="function" eval="'check_order_state'"/>
+        <field name="args" eval="'()'"/>
+    </record>
+
+    <record forcecreate="True" id="external_fulfilment_partner_productsync_cron" model="ir.cron">
+        <field name="name">Fulfilment Product Sync</field>
+        <field name="active" eval="True"/>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">15</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False"/>
+        <field name="model" eval="'external.fulfilment.partner'"/>
+        <field name="function" eval="'check_product_sync'"/>
+        <field name="args" eval="'()'"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="view_order_form_magext_inherit" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit.link</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="magento_id" position="after">
+                        <field name="magento_order_ext" readonly="1"/>
+                    </field>
+                </data>
+           </field>
+        </record>
+
+        <record id="view_order_tree_magext_inherit" model="ir.ui.view">
+            <field name="name">sale.order.tree.magext.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_tree"/>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="magento_id" position="after">
+                        <field name="magento_order_ext"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+<!--
+
+        <record id="view_quotation_tree_magext_inherit" model="ir.ui.view">
+            <field name="name">sale.quotation.tree.magext.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree"/>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="name" position="after">
+                        <field name="magento_order_ext"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+-->
+
+        <record id="view_sales_order_filter_magext_inherit" model="ir.ui.view">
+            <field name="name">sale.order.list.select.magextinherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='name']" position="attributes">
+                        <attribute name="filter_domain">['|','|',('name','ilike',self),('client_order_ref','ilike',self),('magento_id','ilike',self),('magento_order_ext','ilike',self)]</attribute>
+                    </xpath>
+                    <xpath expr="//field[@name='name']" position="after">
+                        <field name="magento_order_ext" string="Magento Order External"/>
+                    </xpath>
+               </data>
+            </field>
+        </record>
+
+    </data>
+</odoo>

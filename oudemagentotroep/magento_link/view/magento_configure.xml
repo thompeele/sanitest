@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>	
+
+		<record id="magento_configure_form" model="ir.ui.view">
+            <field name="name">magento.configure.form</field>
+            <field name="model">magento.configure</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Magento Connection" >
+					<header>
+                        <button name="test_connection" 
+                                type='object' icon="fa-desktop" class="oe_highlight" string='Test Connection'/>
+                        <button name="button_sync_order"
+                                type='object' icon="fa-refresh" string='Sync all missing orders from minimal date'/>
+                    </header>
+					<sheet>
+						<h3><field name="status"/></h3>
+						<label for="active"/>
+						<h3><field name="active"/></h3>
+						<div class="oe_horizontal_separator oe_clear ">
+                            Magento API Settings
+                        </div>
+						<group>
+							<label for="name"/>
+							<h4><field name="name" colspan="4" placeholder="Name for the magento connection"/></h4>
+							<label for="url"/>
+							<h3><field name="url" colspan="4" placeholder="Example: http://mymagento.com"/></h3>
+							<label for="lang"/>
+							<h3><field name="lang" colspan="4" placeholder="Default language for connection"/></h3>
+						</group>
+
+						<notebook>
+							<page string="Stores">
+								<field name="store_ids"/>
+							</page>
+							<page string="Credentials">
+								<group>
+									<group>
+										<label for="user"/>
+										<h3><field name="user" placeholder="Example: apiuser"/></h3>
+									</group>
+									<group>
+										<label for="pwd"/>
+										<h3><field name="pwd" placeholder="Example: apipassword" password="1"/></h3>
+									</group>
+								</group>
+								<div class="oe_horizontal_separator oe_clear">
+									Sales Orders Related Settings
+								</div>
+								<group>
+									<group>
+										<label for="auto_invoice"/>
+										<h3><field name="auto_invoice"/></h3>
+									</group>
+									<group>
+										<label for="auto_ship"/>
+										<h3><field name="auto_ship"/></h3>
+									</group>
+								</group>
+							</page>
+							<page string="Settings">
+								<group string="Product Settings">
+									<field name="product_update_image"/>
+									<field name="product_create_image"/>
+								</group>
+								<group string="Sync Settings">
+									<field name="sync_min_date"/>
+									<field name="product_sync_delay"/>
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread" options='{"thread_level": 1}'/>
+                    </div>
+				</form>
+			</field>
+        </record>
+
+		<record id="magento_configure_tree" model="ir.ui.view">
+            <field name="name">magento.configure.tree</field>
+            <field name="model">magento.configure</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Magento Connection">													
+					<field name="name"/>
+					<field name="url"/>
+					<field name="user"/>						
+					<field name="active"/>
+					<field name="create_date"/>
+				</tree>
+			</field>			
+        </record>
+		
+		<record id="magento_configure_tree_action" model="ir.actions.act_window">
+            <field name="name">Magento Connection</field>
+            <field name="res_model">magento.configure</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+			<p class="oe_view_nocontent_create">
+                Click to define a new magento connection.
+            </p><p>
+               At first create a Web Services(Xml-rpc user/roles) on Magento.
+			   And then Define those credentials for magento connection.
+              </p>
+			</field>
+            <field name="view_id" ref="magento_configure_tree"/>
+        </record>
+
+		</data>
+</odoo>
+		

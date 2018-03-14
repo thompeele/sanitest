@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+            <!-- Magento and erp product Mapping-->
+        <record id="map_product_form" model="ir.ui.view">
+            <field name="name">magento.product.form</field>
+            <field name="model">magento.product</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Product Mapping">
+                    <sheet>
+                        <group>
+                            <field name="pro_name" readonly="1"/>
+                            <field name="oe_product_id" readonly="1"/>
+                            <field name="mag_product_id" readonly="1"/>
+                            <field name="need_sync" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="map_product_tree" model="ir.ui.view">
+            <field name="name">magento.product.tree</field>
+            <field name="model">magento.product</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+            <tree create="false" string="Product Mapping" colors="red:need_sync=='Yes'">
+                <field name="id"/>
+                <field name="pro_name"/>
+                <field name="oe_product_id"/>
+                <field name="mag_product_id"/>
+                <field name="create_date"/>
+                <field name="write_date"/>
+                <field name="need_sync"/>
+            </tree>
+            </field>
+        </record>
+
+        <!-- Map Product Search  -->
+        <record id="map_product_search" model="ir.ui.view">
+            <field name="name">magento.product.search</field>
+            <field name="model">magento.product</field>
+            <field name="arch" type="xml">
+                <search string="Search Magento Products">
+                    <field name="pro_name" string="Product"/>
+                    <field name="oe_product_id" string="ODOO ID"/>
+                    <field name="mag_product_id" string="Magento ID"/>
+                    <group string="Group By" expand="0" >
+                    <filter string="Need Sync" domain="[]" context="{'group_by':'need_sync'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="magento_product_tree_action" model="ir.actions.act_window">
+            <field name="name">Magento product Mapping</field>
+            <field name="res_model">magento.product</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>          
+            <field name="view_id" ref="map_product_tree"/>
+        </record>
+
+            <!-- Magento and erp category Mapping-->
+        <record id="map_category_form" model="ir.ui.view">
+            <field name="name">magento.category.form</field>
+            <field name="model">magento.category</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Category Mapping">
+                    <sheet>
+                        <group>
+                            <field name="cat_name" readonly="1"/>
+                            <field name="oe_category_id" readonly="1"/>
+                            <field name="mag_category_id" readonly="1"/>
+                            <field name="need_sync" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="map_category_tree" model="ir.ui.view">
+            <field name="name">magento.category.tree</field>
+            <field name="model">magento.category</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree create="false" string="Category Mapping" colors="red:need_sync=='Yes'">
+                    <field name="id"/>
+                    <field name="cat_name"/>
+                    <field name="oe_category_id"/>
+                    <field name="mag_category_id"/>
+                    <field name="create_date"/>
+                    <field name="write_date"/>
+                    <field name="need_sync"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Map Product Search  -->
+        <record id="map_category_search" model="ir.ui.view">
+            <field name="name">magento.category.search</field>
+            <field name="model">magento.category</field>
+            <field name="arch" type="xml">
+                <search string="Search Magento Categories">
+                    <field name="cat_name" string="Public Category"/>
+                    <field name="oe_category_id" string="ODOO ID"/>
+                    <field name="mag_category_id" string="Magento ID"/>
+                    <group string="Group By" expand="0" >
+                        <filter string="Need Sync" domain="[]" context="{'group_by':'need_sync'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="magento_category_tree_action" model="ir.actions.act_window">
+            <field name="name">Magento category Mapping</field>
+            <field name="res_model">magento.category</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="map_category_tree"/>
+        </record>
+
+        <!-- Magento and erp customer Mapping-->
+        <record id="map_customer_form" model="ir.ui.view">
+            <field name="name">magento.customers.form</field>
+            <field name="model">magento.customers</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Customers Mapping">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="cus_name" required="1"/>
+                                <field name="oe_customer_id"/>
+                                <field name="mag_customer_id"/>
+                                <field name="mag_address_id"/>
+                                <field name="need_sync"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="map_customer_tree" model="ir.ui.view">
+            <field name="name">magento.customers.tree</field>
+            <field name="model">magento.customers</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Magento Customer Mapping" colors="red:need_sync=='Yes'">
+                    <field name="id"/>
+                    <field name="cus_name"/>
+                    <field name="oe_customer_id"/>
+                    <field name="mag_customer_id"/>
+                    <field name="mag_address_id"/>
+                    <field name="create_date"/>
+                    <field name="write_date"/>
+                    <field name="need_sync"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- Map Customer Search  -->
+        <record id="map_customer_search" model="ir.ui.view">
+            <field name="name">magento.customers.search</field>
+            <field name="model">magento.customers</field>
+            <field name="arch" type="xml">
+                <search string="Search Magento Customer">
+                    <field name="cus_name" string="Customer"/>
+                    <field name="oe_customer_id" string="ODOO ID"/>
+                    <field name="mag_customer_id" string="Magento ID"/>
+                    <field name="mag_address_id" string="Magento Address ID"/>
+                    <group string="Group By" expand="0" >
+                        <filter string="Need Sync" domain="[]" context="{'group_by':'need_sync'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="magento_customer_tree_action" model="ir.actions.act_window">
+            <field name="name">Magento Customer Mapping</field>
+            <field name="res_model">magento.customers</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="map_customer_tree"/>
+        </record>
+
+            <!-- Magento Region Mapping-->
+
+        <record id="map_region_form" model="ir.ui.view">
+            <field name="name">magento.region.form</field>
+            <field name="model">magento.region</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Region Mapping">
+                    <sheet>
+                        <group>
+                            <field name="mag_region_id" readonly="1"/>
+                            <field name="country_code" readonly="1"/>
+                            <field name="region_code" readonly="1"/>
+                            <field name="name" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="map_region_tree" model="ir.ui.view">
+            <field name="name">magento.region.tree</field>
+            <field name="model">magento.region</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree create="false" string="Magento Region Mapping">
+                    <field name="mag_region_id"/>
+                    <field name="country_code"/>
+                    <field name="region_code"/>
+                    <field name="name"/>
+                    <field name="create_date"/>
+                    <field name="write_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="magento_region_tree_action" model="ir.actions.act_window">
+            <field name="name">Magento Region Mapping</field>
+            <field name="res_model">magento.region</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="map_region_tree"/>
+        </record>
+
+        <!-- Magento and erp Sale Order  Mapping-->
+
+        <record id="map_order_form" model="ir.ui.view">
+            <field name="name">magento.orders.form</field>
+            <field name="model">magento.orders</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Order Mapping">
+                    <sheet>
+                        <group>
+                            <field name="order_ref" readonly="1"/>
+                            <field name="oe_order_id" readonly="1"/>
+                            <field name="mag_orderIncrement_Id" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+        </field>
+        </record>
+
+        <record id="map_order_tree" model="ir.ui.view">
+            <field name="name">magento.orders.tree</field>
+            <field name="model">magento.orders</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Magento Order Mapping">
+                    <field name="id"/>
+                    <field name="order_ref"/>
+                    <field name="oe_order_id"/>
+                    <field name="mag_orderIncrement_Id"/>
+                    <field name="create_date"/>
+                    <field name="write_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="magento_order_tree_action" model="ir.actions.act_window">
+            <field name="name">Magento Orders Mapping</field>
+            <field name="res_model">magento.orders</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="map_order_tree"/>
+        </record>
+
+    </data>
+</odoo>

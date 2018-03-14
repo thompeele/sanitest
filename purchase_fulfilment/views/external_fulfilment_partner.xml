@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+        <record id="external_fulfilment_partner_view_form" model="ir.ui.view">
+        <field name="name">external.fulfilment.partner.form</field>
+        <field name="model">external.fulfilment.partner</field>
+        <field name="arch" type="xml">
+            <form string="Fulfilment Partner">
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="partner"/>
+                        <field name="external_fulfilment"/>
+                        <field name="active"/>
+                        <field name="external_id"/>
+                        <field name="sales_team_id"/>
+                    </group>
+                    <notebook name="notebook1">
+                        <page name="information" string="Information">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="external_fulfilment_partner_view_tree" model="ir.ui.view">
+        <field name="name">external.fulfilment.partner.tree</field>
+        <field name="model">external.fulfilment.partner</field>
+        <field name="arch" type="xml">
+            <tree string="Fulfilment Partners">
+                <field name="partner"/>
+                <field name="external_fulfilment"/>
+                <field name="active"/>
+                <field name="external_id"/>
+                <field name="sales_team_id"/>
+                <button name="fulfil_product_sync" string="Product Sync" type="object" icon="terp-gtk-jump-to-ltr"/>
+                <button name="fulfil_product_map" string="Product Map" type="object" icon="terp-go-home"/>
+                <button name="fulfil_orderlist_state" string="Check Order State" type="object" icon="terp-accessories-archiver"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="external_fulfilment_partner_action" model="ir.actions.act_window">
+        <field name="name">Fulfilment Partners</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">external.fulfilment.partner</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                <!-- Add Text Here -->
+            </p><p>
+            <!-- More details about what a user can do with this object will be OK -->
+        </p>
+        </field>
+    </record>
+
+</odoo>
