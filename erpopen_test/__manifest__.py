@@ -1,9 +1,9 @@
 {
-    'name': 'Odoo Magento Connector',
-    'version': '2.3',
+    'name': 'erp|open test',
+    'version': '1',
     'category': 'all',
-    'description': 'Magento odoo connector',
-    'summary': 'Magento odoo connector. ',
+    'description': 'none',
+    'summary': 'none ',
     'author': 'Thom Peele - ERP|OPEN',
     'website': 'erpopen.nl',
     'support': 'info@erpopen.nl',
@@ -12,5 +12,4 @@
     ],
     'installable': True,
     'auto_install': False,
-    'images': ['images/icon.png'],
 }
