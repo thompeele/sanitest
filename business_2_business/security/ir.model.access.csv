@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_business_2_business_user,business.2.business,model_business_2_business,business_2_business.group_business_2_business_user,1,1,1,0
-access_business_2_business_manager,business.2.business,model_business_2_business,business_2_business.group_business_2_business_manager,1,1,1,1
-access_business_2_business_line_user,business.2.business.line,model_business_2_business_line,business_2_business.group_business_2_business_user,1,1,1,1
-access_business_2_business_line_manager,business.2.business.line,model_business_2_business_line,business_2_business.group_business_2_business_manager,1,1,1,1

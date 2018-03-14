@@ -1,2 +1,0 @@
-import sale_order
-import account_invoice
