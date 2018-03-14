@@ -365,37 +365,37 @@
         </record>
 
 
-        <record id="magento_categories_tree_inherit" model="ir.ui.view">
-            <field name="name">magento_categories_tree_inherit</field>
-            <field name="model">product.public.category</field>
-            <field name="inherit_id" ref="website_sale.product_public_category_tree_view"/>
-            <field name="arch" type="xml">
+        <!--<record id="magento_categories_tree_inherit" model="ir.ui.view">-->
+            <!--<field name="name">magento_categories_tree_inherit</field>-->
+            <!--<field name="model">product.public.category</field>-->
+            <!--<field name="inherit_id" ref="website_sale.product_public_category_tree_view"/>-->
+            <!--<field name="arch" type="xml">-->
 
-                <xpath expr="//field[@name='display_name']" position="after">
-                    <field name="store_id" string="Store ID"/>
-                    <field name="store_name" string="Store Name"/>
-                </xpath>
+                <!--<xpath expr="//field[@name='display_name']" position="after">-->
+                    <!--<field name="store_id" string="Store ID"/>-->
+                    <!--<field name="store_name" string="Store Name"/>-->
+                <!--</xpath>-->
 
-            </field>
-        </record>
+            <!--</field>-->
+        <!--</record>-->
 
 
-        <record id="magento_categories_form_inherit" model="ir.ui.view">
-            <field name="name">magento_categories_form_inherit</field>
-            <field name="model">product.public.category</field>
-            <field name="inherit_id" ref="website_sale.product_public_category_form_view"/>
-            <field name="arch" type="xml">
-                <xpath expr="//field[@name='sequence']" position="after">
-                    <group string="Magento Store">
-                        <field name="store_id" string="Store ID"/>
-                        <field name="store_name" string="Store Name"/>
-                        <field name="magento_id" string="Magento ID"/>
-                        <field name="product_categ"/>
-                    </group>
-                </xpath>
+        <!--<record id="magento_categories_form_inherit" model="ir.ui.view">-->
+            <!--<field name="name">magento_categories_form_inherit</field>-->
+            <!--<field name="model">product.public.category</field>-->
+            <!--<field name="inherit_id" ref="website_sale.product_public_category_form_view"/>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<xpath expr="//field[@name='sequence']" position="after">-->
+                    <!--<group string="Magento Store">-->
+                        <!--<field name="store_id" string="Store ID"/>-->
+                        <!--<field name="store_name" string="Store Name"/>-->
+                        <!--<field name="magento_id" string="Magento ID"/>-->
+                        <!--<field name="product_categ"/>-->
+                    <!--</group>-->
+                <!--</xpath>-->
 
-            </field>
-        </record>
+            <!--</field>-->
+        <!--</record>-->
 
         <record id="magento_attribute_set_tree" model="ir.ui.view">
             <field name="name">magento_attribute_set_tree</field>
@@ -825,12 +825,12 @@
                   action="mage_customers_exported_action"
                   parent="mage_menu_customers"/>
 
-        <!-- Magento Categories -->
-        <menuitem id="mage_menu_categories_tree"
-                  name="Categories"
-                  sequence="1"
-                  action="website_sale.product_public_category_action"
-                  parent="mage_menu_categories"/>
+        <!--&lt;!&ndash; Magento Categories &ndash;&gt;-->
+        <!--<menuitem id="mage_menu_categories_tree"-->
+                  <!--name="Categories"-->
+                  <!--sequence="1"-->
+                  <!--action="website_sale.product_public_category_action"-->
+                  <!--parent="mage_menu_categories"/>-->
 
         <!-- Magento Attributes and Values -->
         <menuitem id="mage_menu_attributes_set_tree"

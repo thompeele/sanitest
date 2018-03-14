@@ -14,8 +14,7 @@
         'stock',
         'delivery',
         'account_accountant',
-        'purchase',
-        'website_sale'
+        'purchase'
     ],
     'data': [
         'views/magento.xml',
